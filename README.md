@@ -1,2 +1,2 @@
 # wifimo
-Wifi monitor
+Wifi monitoring for the Alix router box
