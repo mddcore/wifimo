@@ -1,5 +1,11 @@
+
 import os
 import subprocess
+from datetime import datetime
+
+# Date and time  format
+
+today = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 # Linux command to execute to get wlan0 bytes for bandwidth
 
@@ -13,4 +19,4 @@ proc=subprocess.Popen("ifconfig wlan0 |grep bytes | cut -d\":\" -f3 |cut -d\" \"
 outgoing=proc.communicate()[0]
 
 
-print incoming, outgoing
+print 'Date:', today, 'Incoming:', incoming, 'Outgoing:', outgoing
